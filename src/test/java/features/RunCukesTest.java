@@ -6,6 +6,6 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/java/features", tags= {"@UnitTest"}, glue= {"stepDefs"})
 
-public class featureRunner {
+public class RunCukesTest {
 
 }
