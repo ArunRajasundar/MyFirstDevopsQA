@@ -12,7 +12,12 @@
 @tag
 Feature: Payment options page
 
-  @PaymentPage @UnitTest @Regression
+  @PaymentPage @UnitTest 
   Scenario: Validating four payment option are displayed in home page
+    Given The payment application is loaded
+    Then Payment options should be displayed
+
+      @PaymentPage @UnitTest @regression
+  Scenario: Validating three payment option are displayed in new page
     Given The payment application is loaded
     Then Payment options should be displayed
