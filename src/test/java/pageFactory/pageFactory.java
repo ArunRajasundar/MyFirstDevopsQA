@@ -30,10 +30,10 @@ public class pageFactory {
 	
 	public void payOutstanding()
 	{
-		WebElement web = driver.findElement(By.xpath("//div[@class='cont_ba_opcitiy']//input[@type='text']"));
-		web.click();
-	    web.sendKeys("300");
-	    driver.findElement(By.xpath("//button[contains(text(),'Pay')]")).click();
+//		WebElement web = driver.findElement(By.xpath("//div[@class='cont_ba_opcitiy']//input[@type='text']"));
+//		web.click();
+//	    web.sendKeys("300");
+//	    driver.findElement(By.xpath("//button[contains(text(),'Pay')]")).click();
 	}
 	public void clickCreditcard() throws InterruptedException
 	{

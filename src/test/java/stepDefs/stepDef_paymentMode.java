@@ -83,7 +83,7 @@ public class stepDef_paymentMode {
 	public void i_want_to_select_the_payment_through_PayTm() throws Throwable {
 
 		pf.openBrowser();
-		pf.payOutstanding();  
+		//pf.payOutstanding();  
 	}
 
 	@When("^I select the PayTm option$")

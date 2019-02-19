@@ -1,2 +1,5 @@
-stepDefs\MainPageStepDef.class
 features\RunCukesTest.class
+elementLocators\elementLocators_paymentmode.class
+stepDefs\MainPageStepDef.class
+stepDefs\stepDef_paymentMode.class
+pageFactory\pageFactory.class

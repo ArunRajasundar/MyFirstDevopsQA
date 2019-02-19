@@ -16,13 +16,13 @@ Feature: Payment options page
     Given The payment application is loaded
     Then Payment options should be displayed
 
-@regression
+
   Scenario: Payment method selection
     Given I want to open the payment page
     When I enter the payment due
     Then Payment page should be displayed
 
-@regression, @tc01
+@regression @tc01
   Scenario: Debit card payment
     Given I want to select the payment through Debit card
     When I select the Debit card option
@@ -34,7 +34,7 @@ Feature: Payment options page
     When I select the Credit card option
     Then Validate all the options are available for Credit card payment
 
-@regression
+@regression @UnitTest
   Scenario: PayTm payment
     Given I want to select the payment through PayTm
     When I select the PayTm option
