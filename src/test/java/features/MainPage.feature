@@ -34,7 +34,7 @@ Feature: Payment options page
     When I select the Credit card option
     Then Validate all the options are available for Credit card payment
 
-@regression @UnitTest
+@regression
   Scenario: PayTm payment
     Given I want to select the payment through PayTm
     When I select the PayTm option

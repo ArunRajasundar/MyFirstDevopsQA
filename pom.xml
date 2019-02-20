@@ -13,7 +13,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -65,4 +64,31 @@
 	<version>3.1.2</version>
 	</dependency>
   </dependencies>
+   <profiles>
+   <profile>
+     <id>test</id>
+     <properties>
+     	<env>test</env>
+     	<URLNamed>http://localhost:1010/QaEnv</URLNamed>
+     </properties>
+        </profile>
+        <profile>
+     <id>dev</id>
+     <properties>
+     <env>dev</env>
+     <URLNamed>http://localhost:1010/DevEnv</URLNamed>
+     </properties>
+        </profile>
+   </profiles>
+   <build>
+   <filters>
+   <filter>${basedir}/src/test/java/TestProperties.properties</filter></filters>
+   <resources>
+   <resource>
+   	<filtering>true</filtering>
+   	<directory>${basedir}/src/test/java</directory>
+   	</resource>
+   </resources>
+   </build>
+   
 </project>
