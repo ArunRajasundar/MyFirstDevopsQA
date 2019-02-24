@@ -26,21 +26,21 @@ Feature: Payment options page
   Scenario: Debit card payment
     Given I want to select the payment through Debit card
     When I select the Debit card option
-    Then Validate all the options are available for Debit card payment
+    #Then Validate all the options are available for Debit card payment
 
 @regression
   Scenario: Credit card payment
     Given I want to select the payment through Credit card
     When I select the Credit card option
-    Then Validate all the options are available for Credit card payment
+    #Then Validate all the options are available for Credit card payment
 
-@regression
+@regression1
   Scenario: PayTm payment
     Given I want to select the payment through PayTm
     When I select the PayTm option
     Then Validate whether the page is redirected to the PayTm
 
-@regression
+@regression1
   Scenario: NetBanking payment
     Given I want to select the payment through NetBanking
     When I select the NetBanking option
