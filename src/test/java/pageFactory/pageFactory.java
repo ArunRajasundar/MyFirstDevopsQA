@@ -12,6 +12,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
@@ -29,8 +30,13 @@ public class pageFactory {
 //		Properties pro = new Properties();
 //		InputStream inputs = new FileInputStream("src/test/java/TestProperties.properties");
 //		pro.load(inputs);
+		DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+		caps.setCapability(InternetExplorerDriver.
+  INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+		caps.setCapability("ignoreProtectedModeSettings", true);
+				
 		System.setProperty("webdriver.ie.driver", "Libs/IEDriverServer.exe");
-		driver = new InternetExplorerDriver();
+		driver = new InternetExplorerDriver(caps);
 		driver.get(text.replace("URL1=", ""));
 	//	driver.manage().window().fullscreen();
 		Thread.sleep(2000);
