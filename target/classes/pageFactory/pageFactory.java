@@ -38,8 +38,8 @@ public class pageFactory {
 				
 		System.setProperty("webdriver.ie.driver", "Libs/IEDriverServer.exe");
 		System.setProperty("webdriver.gecko.driver", "Libs/geckodriver.exe");
-		//driver = new InternetExplorerDriver(caps);
-		driver = new FirefoxDriver();
+		driver = new InternetExplorerDriver();
+		//driver = new FirefoxDriver();
 		driver.get(text.replace("URL1=", ""));
 	//	driver.manage().window().fullscreen();
 		Thread.sleep(2000);
