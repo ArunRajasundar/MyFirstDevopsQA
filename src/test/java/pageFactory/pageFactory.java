@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -35,15 +36,17 @@ public class pageFactory {
 		caps.setCapability(InternetExplorerDriver.
   INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
 		caps.setCapability("ignoreProtectedModeSettings", true);
-				*/
+				*//*
 		System.setProperty("webdriver.ie.driver", "Libs/IEDriverServer.exe");
 		System.setProperty("webdriver.gecko.driver", "Libs/geckodriver.exe");
 		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 		capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
 		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-		driver = new InternetExplorerDriver(capabilities);
+		driver = new InternetExplorerDriver(capabilities);*/
 		//driver = new InternetExplorerDriver();
 		//driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "Libs/chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.get(text.replace("URL1=", ""));
 	//	driver.manage().window().fullscreen();
 		Thread.sleep(5000);
