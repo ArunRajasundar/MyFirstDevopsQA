@@ -31,18 +31,18 @@ public class pageFactory {
 //		Properties pro = new Properties();
 //		InputStream inputs = new FileInputStream("src/test/java/TestProperties.properties");
 //		pro.load(inputs);
-		DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+		/*DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 		caps.setCapability(InternetExplorerDriver.
   INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
 		caps.setCapability("ignoreProtectedModeSettings", true);
-				
+				*/
 		System.setProperty("webdriver.ie.driver", "Libs/IEDriverServer.exe");
 		System.setProperty("webdriver.gecko.driver", "Libs/geckodriver.exe");
 		driver = new InternetExplorerDriver();
 		//driver = new FirefoxDriver();
 		driver.get(text.replace("URL1=", ""));
 	//	driver.manage().window().fullscreen();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		return driver;
 	}
 	
