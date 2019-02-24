@@ -38,7 +38,11 @@ public class pageFactory {
 				*/
 		System.setProperty("webdriver.ie.driver", "Libs/IEDriverServer.exe");
 		System.setProperty("webdriver.gecko.driver", "Libs/geckodriver.exe");
-		driver = new InternetExplorerDriver();
+		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+		capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		driver = new InternetExplorerDriver(capabilities);
+		//driver = new InternetExplorerDriver();
 		//driver = new FirefoxDriver();
 		driver.get(text.replace("URL1=", ""));
 	//	driver.manage().window().fullscreen();
